@@ -1,7 +1,7 @@
 /**
  * Util class 
  */
-package ${package}.${serviceNameFolder.replace('/','.')}.util;
+package ${package}.${microserviceNameFolder.replace('/','.')}.util;
 
 /**
  * @author Ramón Cigüenza Fuster

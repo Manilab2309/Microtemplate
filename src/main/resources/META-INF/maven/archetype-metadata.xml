@@ -1,9 +1,6 @@
 <archetype-descriptor>
   <id>${artifactId}</id>
   <requiredProperties>
-    <requiredProperty key="artifactId">
-      <defaultValue>block</defaultValue>
-    </requiredProperty>
     <requiredProperty key="groupId">
       <defaultValue>com.rcf</defaultValue>
     </requiredProperty>
@@ -19,6 +16,7 @@
     <requiredProperty key="microserviceName" />
     <requiredProperty key="microserviceNameFolder" />
     <requiredProperty key="microserviceNameEntity" />
+    <requiredProperty key="microservicePort"/>
   </requiredProperties>
 
   <fileSets>

@@ -1,7 +1,7 @@
 /**
  * Ciudadano
  */
-package ${package}.${serviceNameFolder.replace('/','.')}.entity;
+package ${package}.${microserviceNameFolder.replace('/','.')}.entity;
 
 import java.io.Serializable;
 

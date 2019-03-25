@@ -1,7 +1,7 @@
 /**
  * CRUD SERVICE
  */
-package ${package}.${serviceNameFolder.replace('/','.')}.service;
+package ${package}.${microserviceNameFolder.replace('/','.')}.service;
 
 import java.io.Serializable;
 import ${package}.${microserviceNameFolder.replace('/','.')}.entity.${microserviceNameEntity};

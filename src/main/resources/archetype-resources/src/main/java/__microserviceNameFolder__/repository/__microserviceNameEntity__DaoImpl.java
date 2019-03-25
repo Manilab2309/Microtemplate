@@ -1,21 +1,19 @@
 /**
- * Implementación de Acceso a BBDD NoSQL para los servicios de los ciudadanos
+ * MICROSERVICE DAO IMPLEMENTATION
  */
-package ${package}.${serviceNameFolder.replace('/','.')}.repository;
+package ${package}.${microserviceNameFolder.replace('/','.')}.repository;
 
-import ${package}.${microserviceNameFolder.replace('/','.')}.util.${microserviceName}Constants;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.data.mongodb.core.MongoTemplate;
-import org.springframework.data.mongodb.core.query.Criteria;
-import org.springframework.data.mongodb.core.query.Query;
 import org.springframework.stereotype.Repository;
 
 import ${package}.${microserviceNameFolder.replace('/','.')}.exceptions.${microserviceName}UserNotAuthorizedException;
 import ${package}.${microserviceNameFolder.replace('/','.')}.repository.${microserviceNameEntity}Dao;
-
+import ${package}.${microserviceNameFolder.replace('/','.')}.util.${microserviceName}Constants;
+import ${package}.${microserviceNameFolder.replace('/','.')}.entity.${microserviceNameEntity};
 
 /**
  * @author Ramón Cigüenza
@@ -33,14 +31,14 @@ public class ${microserviceNameEntity}DaoImpl implements ${microserviceNameEntit
 	MongoTemplate mongoTemplate;
 
 	@Override
-	public void create(String name) {
+	public void create(${microserviceNameEntity} ${microserviceNameEntity.toLowerCase()}) {
 
 		logger.debug(${microserviceName}Constants.MsgDebugOperations.DEBUG_PREFIX_MSG_DEBUG
-		+ "Dao Impl creating ${microservicesNameEntity}");
+		+ "Dao Impl creating ${microserviceNameEntity}");
 
 		// TODO DT Database interact
 
-		logger.debug({microserviceName}Constants.MsgDebugOperations.DEBUG_PREFIX_MSG_DEBUG
+		logger.debug(${microserviceName}Constants.MsgDebugOperations.DEBUG_PREFIX_MSG_DEBUG
 		+ "Dao Impl success");
 	}
 

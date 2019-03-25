@@ -1,7 +1,7 @@
 /**
- * 
+ * AUTHENTICATION USER EXCEPTION
  */
-package ${package}.${serviceNameFolder.replace('/','.')}.exceptions;
+package ${package}.${microserviceNameFolder.replace('/','.')}.exceptions;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;

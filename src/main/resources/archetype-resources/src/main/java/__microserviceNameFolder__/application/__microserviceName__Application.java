@@ -10,6 +10,8 @@ import org.springframework.context.annotation.Import;
 
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
+import ${package}.${microserviceNameFolder.replace('/','.')}.config.${microserviceName}SwaggerConfiguration;
+
 
 /**
  * @author Ramón Cigüenza

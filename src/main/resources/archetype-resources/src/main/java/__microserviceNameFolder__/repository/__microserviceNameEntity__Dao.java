@@ -1,7 +1,7 @@
 /**
- * 
+ * MICROSERVICE DAO INTERFACE
  */
-package ${package}.${serviceNameFolder.replace('/','.')}.repository;
+package ${package}.${microserviceNameFolder.replace('/','.')}.repository;
 
 import java.io.Serializable;
 import ${package}.${microserviceNameFolder.replace('/','.')}.entity.${microserviceNameEntity};
