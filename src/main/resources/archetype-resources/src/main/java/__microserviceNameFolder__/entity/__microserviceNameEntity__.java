@@ -1,5 +1,5 @@
 /**
- * Ciudadano
+ * ${microserviceNameEntity.toUpperCase()}
  */
 package ${package}.${microserviceNameFolder.replace('/','.')}.entity;
 
@@ -22,4 +22,24 @@ public class ${microserviceNameEntity} implements Serializable {
 	@Field("name")
 	private String name;
 
+	public ${microserviceNameEntity}(String id${microserviceNameEntity}, String name) {
+			this.id${microserviceNameEntity} = id${microserviceNameEntity};
+			this.name = name;
+			}
+
+	public String getId${microserviceNameEntity}() {
+			return id${microserviceNameEntity};
+			}
+
+	public void setId${microserviceNameEntity}(String id${microserviceNameEntity}) {
+			this.id${microserviceNameEntity} = id${microserviceNameEntity};
+			}
+
+	public String getName() {
+			return name;
+			}
+
+	public void setName(String name) {
+			this.name = name;
+			}
 }

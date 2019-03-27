@@ -10,13 +10,14 @@
     <requiredProperty key="package">
       <defaultValue>com</defaultValue>
     </requiredProperty>
-    <requiredProperty key="type">
-      <defaultValue>NODELETE</defaultValue>
-    </requiredProperty>
     <requiredProperty key="microserviceName" />
     <requiredProperty key="microserviceNameFolder" />
     <requiredProperty key="microserviceNameEntity" />
     <requiredProperty key="microservicePort"/>
+    <requiredProperty key="eurekaServerUrl">
+      <validationRegex>(https?://.*):(\d*)\/?(.*)</validationRegex>
+    </requiredProperty>
+    <requiredProperty key="apiVersion"/>
   </requiredProperties>
 
   <fileSets>
@@ -31,6 +32,7 @@
       <includes>
         <include>**/*.xml</include>
         <include>**/*.properties</include>
+        <include>**/*.p12</include>
       </includes>
     </fileSet>
     <fileSet filtered="true" packaged="true" encoding="UTF-8">

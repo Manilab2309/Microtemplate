@@ -1,5 +1,5 @@
 /**
- * Util class 
+ * MESSAGE CLASS UTILITY
  */
 package ${package}.${microserviceNameFolder.replace('/','.')}.util;
 

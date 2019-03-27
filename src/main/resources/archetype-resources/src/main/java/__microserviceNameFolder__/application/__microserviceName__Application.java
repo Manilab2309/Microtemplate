@@ -2,11 +2,12 @@ package ${package}.${microserviceNameFolder.replace('/','.')}.application;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Import;
+import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
@@ -24,6 +25,7 @@ import ${package}.${microserviceNameFolder.replace('/','.')}.config.${microservi
 
 @SpringBootApplication
 @EnableSwagger2
+@EnableEurekaClient
 @Import(${microserviceName}SwaggerConfiguration.class)
 
 public class ${microserviceName}Application {
@@ -32,8 +34,10 @@ public class ${microserviceName}Application {
 	
 	public static void main(String[] args) {
 
-		// La ejecución comienza aquí
-		SpringApplication.run(${microserviceName}Application.class, args);
+		new SpringApplicationBuilder(${microserviceName}Application.class)
+		.properties("spring.config.name:${microserviceName}-application")
+		.build()
+		.run(args);
 
 		logger.debug("-- Application API ${microserviceName} Started --");
 	}
