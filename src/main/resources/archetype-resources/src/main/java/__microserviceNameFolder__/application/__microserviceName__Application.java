@@ -35,7 +35,7 @@ public class ${microserviceName}Application {
 	public static void main(String[] args) {
 
 		new SpringApplicationBuilder(${microserviceName}Application.class)
-		.properties("spring.config.name:${microserviceName}-application")
+		.properties("spring.config.name:${microserviceName}-default")
 		.build()
 		.run(args);
 
